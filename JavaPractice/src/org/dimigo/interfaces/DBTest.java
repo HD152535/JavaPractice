@@ -8,8 +8,11 @@ public class DBTest {
 		IDBManager s = IDBManager.getDBObject(IDBManager.SYBASE_DATABASE);
 		IDBManager o = IDBManager.getDBObject(IDBManager.ORACLE_DATABASE);
 		
+		
+		System.out.println("<< 변경 전  >>");
 		crud(s);
 		System.out.println();
+		System.out.println("<< 변경 후  >>");
 		crud(o);
 
 	}
