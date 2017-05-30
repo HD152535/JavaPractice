@@ -18,14 +18,14 @@ public class Movie {
 		return limitAge;
 	}
 
-	public void buyTicket(int age) {
+	public void buyTicket(int age) throws Exception {
 		try {
 			if (age < limitAge) {
 				throw new Exception(title + "은/는 " + limitAge + "세 이상 관람가입니다.");
 			}
 			System.out.println(title + " 즐감하세요.");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			throw e;
 		}
 	}
 }
